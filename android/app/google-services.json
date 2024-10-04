@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "169054060714",
+    "project_id": "cloud-notes-app-a5b21",
+    "storage_bucket": "cloud-notes-app-a5b21.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:169054060714:android:d5dd7af99981895ae910d3",
+        "android_client_info": {
+          "package_name": "com.example.cloud_notes"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClgq3qnenRxiMM9Gje33RWTSX6WQ_mUPQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:169054060714:android:31529fbdbcae448be910d3",
+        "android_client_info": {
+          "package_name": "com.example.cloud_notes_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClgq3qnenRxiMM9Gje33RWTSX6WQ_mUPQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
