@@ -1,21 +1,20 @@
-import 'package:cloud_notes_app/routes/routeNames.dart';
+import 'package:flutter/material.dart';
 import 'package:cloud_notes_app/widgets/customTextButton.dart';
 import 'package:cloud_notes_app/widgets/customTextField.dart';
-import 'package:flutter/material.dart';
 import 'package:cloud_notes_app/utils/color.dart';
+import 'package:cloud_notes_app/routes/routeNames.dart';
 
-class SignupPage extends StatefulWidget {
-  const SignupPage({super.key});
+
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
 
   @override
-  State<SignupPage> createState() => _SignupPageState();
+  State<LoginPage> createState() => _LoginPageState();
 }
 
-class _SignupPageState extends State<SignupPage> {
-  TextEditingController nameController = TextEditingController();
+class _LoginPageState extends State<LoginPage> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
-  TextEditingController phoneController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +22,7 @@ class _SignupPageState extends State<SignupPage> {
       backgroundColor: kprimary,
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.all(16.0), // Simple padding for the content
+          padding: const EdgeInsets.all(16.0), 
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -37,18 +36,8 @@ class _SignupPageState extends State<SignupPage> {
               ),
               SizedBox(height: 30),
               CustomTextField(
-                hintText: 'Name',
-                controller: nameController,
-              ),
-              SizedBox(height: 20),
-              CustomTextField(
                 hintText: 'Email',
                 controller: emailController,
-              ),
-              SizedBox(height: 20),
-              CustomTextField(
-                hintText: 'Phone',
-                controller: phoneController,
               ),
               SizedBox(height: 20),
               CustomTextField(
@@ -56,13 +45,36 @@ class _SignupPageState extends State<SignupPage> {
                 controller: passwordController,
                 obscureText: true,
               ),
-              SizedBox(height: 50
-              ),
+              SizedBox(height: 50), 
               CustomTextButton(
-                text: 'SIGN UP',
+                text: 'LOGIN',
                 onPressed: () {
-                  Navigator.pushNamed(context, AppRoute.loginPage);
+                  print('Login button pressed!');
+                  Navigator.pushNamed(context, AppRoute.homePage);
                 },
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text(
+                    'If not registered, ',
+                    style: TextStyle(
+                      color: wprimary,
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, AppRoute.signupScreen);
+                    },
+                    child: Text(
+                      'register now',
+                      style: TextStyle(
+                        color: ksecondary, 
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
